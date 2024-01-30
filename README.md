@@ -1,6 +1,6 @@
-## Stateful scheduler
+ ## Stateful scheduler
 
----
+
 Schedule stateful jobs, which has execution state information.
 
 Configuration example:
