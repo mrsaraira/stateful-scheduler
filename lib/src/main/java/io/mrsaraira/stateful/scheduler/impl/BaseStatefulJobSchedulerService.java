@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  * @author Takhsin Saraira
  */
 @RequiredArgsConstructor
-public class BaseStatefulJobSchedulerService<T extends NamedJob> implements StatefulJobSchedulerService<T> {
+public abstract class BaseStatefulJobSchedulerService<T extends NamedJob> implements StatefulJobSchedulerService<T> {
 
     protected final StatefulTaskScheduler taskScheduler;
     protected final Map<String, T> jobs;
