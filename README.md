@@ -55,15 +55,15 @@ class MyStatefulJobSchedulerServiceImpl extends BaseStatefulJobSchedulerService<
 }
 
 /*
- * Now just inject MyStatefulJobSchedulerServiceImpl or StatefulJobSchedulerService to operate on available NamedJob
+ * Inject MyStatefulJobSchedulerServiceImpl or StatefulJobSchedulerService to operate on available NamedJobs
  * in the scheduler, or register your own dynamically with a given name.
  * 
  * Available operations:
- *  + schedule job (returns StatefulScheduledFuture)
- *  + cancel job
- *  + get jobs information (which includes its execution state and Thread.State)
- *  + get all jobs (name-NamedJob)
- *  + get job by name
+ *  + Schedule job (returns StatefulScheduledFuture).
+ *  + Cancel Job.
+ *  + Get jobs information (which includes its name, execution state, Thread.State, elapsed time, run time, is cancelled).
+ *  + Get all jobs (name-NamedJob).
+ *  + Get a job by name.
  *  + You can extend this list as you wish :)
  */
 ```
@@ -73,9 +73,9 @@ class MyStatefulJobSchedulerServiceImpl extends BaseStatefulJobSchedulerService<
 ![execution-states-transition.png](images/execution-states-transition.png)
 Fig. 1 Execution State transition
 
-* New - Job is scheduled but not yet running.
-* Started - Job is currently running.
-* Cancelled - The job has been cancelled and a and will not be rescheduled, but it still running.
+* New - The job is scheduled but not yet running.
+* Started - The job is currently running.
+* Cancelled - The job has been cancelled and will not be rescheduled, but it is still running.
 * Stopped - The job fully stopped upon cancellation and may have been interrupted or completed normally.
-* Completed - The job has completed and is no longer running.
+* Completed - The job has been completed and is no longer running.
 
