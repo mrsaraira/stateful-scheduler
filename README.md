@@ -1,7 +1,7 @@
  ## Stateful scheduler
 
 
-Schedule stateful jobs, which has execution state information.
+Schedule stateful jobs, which contain additional execution state information.
 
 Configuration example:
 
